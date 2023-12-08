@@ -55,5 +55,19 @@ namespace hospital1
             doctor.Show();
             this.Hide();
         }
+
+        private void patientBtn_Click(object sender, EventArgs e)
+        {
+            Patient patient =new Patient(); 
+            patient.Show();
+            this.Hide();
+        }
+
+        private void diagnosisBtn_Click(object sender, EventArgs e)
+        {
+            Diagnosis diagnosis =new Diagnosis();   
+            diagnosis.Show();
+            this.Hide();
+        }
     }
 }

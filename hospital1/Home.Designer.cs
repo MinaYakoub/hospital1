@@ -101,6 +101,7 @@
             this.diagnosisBtn.TabIndex = 21;
             this.diagnosisBtn.Text = "Diagnosis";
             this.diagnosisBtn.UseVisualStyleBackColor = false;
+            this.diagnosisBtn.Click += new System.EventHandler(this.diagnosisBtn_Click);
             // 
             // patientBtn
             // 
@@ -114,6 +115,7 @@
             this.patientBtn.TabIndex = 22;
             this.patientBtn.Text = "Patient";
             this.patientBtn.UseVisualStyleBackColor = false;
+            this.patientBtn.Click += new System.EventHandler(this.patientBtn_Click);
             // 
             // exitBtn
             // 
