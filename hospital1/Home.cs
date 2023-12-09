@@ -69,5 +69,12 @@ namespace hospital1
             diagnosis.Show();
             this.Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Search search =new Search();        
+            search.Show();
+            this.Hide();
+        }
     }
 }

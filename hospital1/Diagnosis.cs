@@ -270,16 +270,23 @@ namespace hospital1
             try
             {
                 con.Open();
-                string ss = "select * from Patient where PId =" + comboBox1.SelectedValue.ToString();
-                SqlCommand cmd  = new SqlCommand(ss, con);
-                DataTable dt =  new DataTable();
-                SqlDataAdapter ada = new SqlDataAdapter(cmd);
-                ada.Fill(dt);
-                foreach (DataRow dr in dt.Rows)
-                {
-                    pname = dr["PName"].ToString();
-                    textBox2.Text = pname;
+                if (comboBox1.SelectedValue != null) {
+                    string ss = "select * from Patient where PId =" + comboBox1.SelectedValue.ToString();
+                    SqlCommand cmd = new SqlCommand(ss, con);
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter ada = new SqlDataAdapter(cmd);
+                    ada.Fill(dt);
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        pname = dr["PName"].ToString();
+                            textBox2.Text = pname;
+                    }
                 }
+                else
+                {
+
+                }
+                
                 con.Close();
             }
             catch (Exception ex)
@@ -340,5 +347,4 @@ namespace hospital1
             this.Close();
         }
     }
-    
 }
